@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://r6cgxj1p1ru"]
+
+[ext_resource type="PackedScene" uid="uid://bnjf0xapicspq" path="res://player.tscn" id="1_lgngo"]
+[ext_resource type="PackedScene" uid="uid://cf3cvda0bv6x" path="res://static_body_2d.tscn" id="2_fw4w5"]
+
+[node name="Node2D" type="Node2D" unique_id=1909157874]
+
+[node name="Player" parent="." unique_id=559844357 instance=ExtResource("1_lgngo")]
+
+[node name="Piso" parent="." unique_id=1548676357 instance=ExtResource("2_fw4w5")]
