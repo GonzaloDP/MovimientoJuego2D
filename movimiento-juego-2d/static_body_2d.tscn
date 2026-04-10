@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://0bwe33hc03n5" path="res://icon.svg" id="1_yjt17"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ypqmy"]
-size = Vector2(594, 126)
+size = Vector2(1226, 126)
 
 [node name="Piso" type="StaticBody2D" unique_id=1548676357]
 position = Vector2(3, 507)
@@ -11,10 +11,10 @@ metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1741275887]
 modulate = Color(0.023529412, 0, 0, 1)
-position = Vector2(235, 0)
-scale = Vector2(4.671875, 1)
+position = Vector2(550.5, 0)
+scale = Vector2(9.6015625, 1)
 texture = ExtResource("1_yjt17")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1585483949]
-position = Vector2(236, 0)
+position = Vector2(552, 0)
 shape = SubResource("RectangleShape2D_ypqmy")

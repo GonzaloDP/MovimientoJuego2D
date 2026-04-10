@@ -7,7 +7,7 @@
 radius = 32.01562
 
 [node name="Player" type="CharacterBody2D" unique_id=559844357]
-position = Vector2(237, 332)
+position = Vector2(560, 370)
 script = ExtResource("1_onrkg")
 metadata/_edit_group_ = true
 
@@ -17,3 +17,9 @@ texture = ExtResource("2_i3pqv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1793142903]
 shape = SubResource("CircleShape2D_hqtel")
+
+[node name="DashDuracion" type="Timer" parent="." unique_id=1159393225]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="DashDuracion" to="." method="_on_dash_duracion_timeout"]
