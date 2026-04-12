@@ -3,8 +3,8 @@ extends CharacterBody2D
 @onready var DashDuracion = $DashDuracion
 
 const velocidad = 5000.0
-const gravedad = 9.8
-const dash = 300.0
+const gravedad = 19
+const dash = 150.0
 var salto_diponible = true
 var velocidad_de_salto = -500.0
 var dash_direccion: float

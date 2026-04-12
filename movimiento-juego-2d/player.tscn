@@ -15,6 +15,7 @@ scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_i3pqv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1793142903]
+visible = false
 shape = SubResource("CircleShape2D_hqtel")
 
 [node name="DashDuracion" type="Timer" parent="." unique_id=1159393225]
