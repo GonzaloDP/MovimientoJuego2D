@@ -1,12 +1,21 @@
 [gd_scene format=3 uid="uid://r6cgxj1p1ru"]
 
 [ext_resource type="PackedScene" uid="uid://bnjf0xapicspq" path="res://player.tscn" id="1_lgngo"]
+[ext_resource type="Script" uid="uid://df124egr22uhb" path="res://mundo.gd" id="1_otwa2"]
 [ext_resource type="PackedScene" uid="uid://cf3cvda0bv6x" path="res://static_body_2d.tscn" id="2_fw4w5"]
+[ext_resource type="PackedScene" uid="uid://dvarmhuxrckp6" path="res://objeto_parreable.tscn" id="3_fw4w5"]
 
 [node name="Node2D" type="Node2D" unique_id=1985631070]
+script = ExtResource("1_otwa2")
 
 [node name="Piso" parent="." unique_id=1548676357 instance=ExtResource("2_fw4w5")]
 position = Vector2(33, 549)
 
 [node name="Player" parent="." unique_id=559844357 instance=ExtResource("1_lgngo")]
 position = Vector2(556, 383)
+
+[node name="ObjetoParreable" parent="." unique_id=140518511 instance=ExtResource("3_fw4w5")]
+position = Vector2(738, 311)
+
+[connection signal="body_entered" from="ObjetoParreable" to="Player" method="_on_objeto_parreable_body_entered"]
+[connection signal="body_exited" from="ObjetoParreable" to="Player" method="_on_objeto_parreable_body_exited"]
