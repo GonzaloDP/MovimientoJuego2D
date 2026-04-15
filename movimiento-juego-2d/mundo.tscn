@@ -4,6 +4,8 @@
 [ext_resource type="Script" uid="uid://df124egr22uhb" path="res://mundo.gd" id="1_otwa2"]
 [ext_resource type="PackedScene" uid="uid://cf3cvda0bv6x" path="res://static_body_2d.tscn" id="2_fw4w5"]
 [ext_resource type="PackedScene" uid="uid://dvarmhuxrckp6" path="res://objeto_parreable.tscn" id="3_fw4w5"]
+[ext_resource type="PackedScene" uid="uid://cveojljx6ua3t" path="res://caja.tscn" id="5_aou4a"]
+[ext_resource type="PackedScene" uid="uid://c7m6xetdhfv36" path="res://pared.tscn" id="6_5ckkb"]
 
 [node name="Node2D" type="Node2D" unique_id=1985631070]
 script = ExtResource("1_otwa2")
@@ -12,10 +14,106 @@ script = ExtResource("1_otwa2")
 position = Vector2(33, 549)
 
 [node name="Player" parent="." unique_id=559844357 instance=ExtResource("1_lgngo")]
-position = Vector2(556, 383)
+position = Vector2(58, 450)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1678096458]
+position = Vector2(-2, 0)
+offset = Vector2(518.605, -127.495)
+zoom = Vector2(1, 1.13)
+drag_vertical_enabled = true
+drag_left_margin = 1.0
+drag_top_margin = 1.0
+drag_right_margin = 0.68
+drag_bottom_margin = 0.0
+editor_draw_drag_margin = true
 
 [node name="ObjetoParreable" parent="." unique_id=140518511 instance=ExtResource("3_fw4w5")]
-position = Vector2(738, 311)
+position = Vector2(1164, 370)
+
+[node name="Caja" parent="." unique_id=628677942 instance=ExtResource("5_aou4a")]
+position = Vector2(183, 455)
+
+[node name="Caja2" parent="." unique_id=387345891 instance=ExtResource("5_aou4a")]
+position = Vector2(325, 379)
+
+[node name="Pared" parent="." unique_id=2785693 instance=ExtResource("6_5ckkb")]
+position = Vector2(452, 283)
+
+[node name="Pared2" parent="." unique_id=1532485920 instance=ExtResource("6_5ckkb")]
+position = Vector2(990, 271)
+
+[node name="Caja3" parent="." unique_id=409507526 instance=ExtResource("5_aou4a")]
+position = Vector2(642, 409)
+
+[node name="Caja4" parent="." unique_id=1373490197 instance=ExtResource("5_aou4a")]
+position = Vector2(819, 330)
+
+[node name="Piso2" parent="." unique_id=1356668446 instance=ExtResource("2_fw4w5")]
+position = Vector2(1169, 549)
+
+[node name="Caja5" parent="." unique_id=1262308976 instance=ExtResource("5_aou4a")]
+position = Vector2(1279, 364)
+
+[node name="ObjetoParreable2" parent="." unique_id=1562769241 instance=ExtResource("3_fw4w5")]
+position = Vector2(1390, 312)
+
+[node name="Pared3" parent="." unique_id=1457908842 instance=ExtResource("6_5ckkb")]
+position = Vector2(1497, 272)
+
+[node name="Pared4" parent="." unique_id=2049548073 instance=ExtResource("6_5ckkb")]
+position = Vector2(1874, 274)
+
+[node name="Caja6" parent="." unique_id=1737988764 instance=ExtResource("5_aou4a")]
+position = Vector2(1561, 393)
+
+[node name="Caja7" parent="." unique_id=1082859911 instance=ExtResource("5_aou4a")]
+position = Vector2(1734, 305)
+
+[node name="ObjetoParreable3" parent="." unique_id=54676656 instance=ExtResource("3_fw4w5")]
+position = Vector2(1653, 424)
+
+[node name="ObjetoParreable4" parent="." unique_id=1826930582 instance=ExtResource("3_fw4w5")]
+position = Vector2(1636, 271)
+
+[node name="Piso3" parent="." unique_id=1828344966 instance=ExtResource("2_fw4w5")]
+position = Vector2(2203, 549)
+
+[node name="Pared5" parent="." unique_id=1566638546 instance=ExtResource("6_5ckkb")]
+position = Vector2(2309, 270)
+
+[node name="Pared6" parent="." unique_id=1956697737 instance=ExtResource("6_5ckkb")]
+position = Vector2(2948, 272)
+
+[node name="Caja8" parent="." unique_id=1688715955 instance=ExtResource("5_aou4a")]
+position = Vector2(2005, 392)
+
+[node name="Caja9" parent="." unique_id=257353736 instance=ExtResource("5_aou4a")]
+position = Vector2(2149, 328)
+
+[node name="Caja10" parent="." unique_id=54809092 instance=ExtResource("5_aou4a")]
+position = Vector2(2669, 452)
+
+[node name="Caja11" parent="." unique_id=1228880829 instance=ExtResource("5_aou4a")]
+position = Vector2(2820, 385)
+
+[node name="Caja12" parent="." unique_id=1850375655 instance=ExtResource("5_aou4a")]
+position = Vector2(2689, 319)
+
+[node name="ObjetoParreable5" parent="." unique_id=975485322 instance=ExtResource("3_fw4w5")]
+position = Vector2(2507, 399)
+
+[node name="ObjetoParreable6" parent="." unique_id=1277381888 instance=ExtResource("3_fw4w5")]
+position = Vector2(2774, 346)
 
 [connection signal="body_entered" from="ObjetoParreable" to="Player" method="_on_objeto_parreable_body_entered"]
 [connection signal="body_exited" from="ObjetoParreable" to="Player" method="_on_objeto_parreable_body_exited"]
+[connection signal="body_entered" from="ObjetoParreable2" to="Player" method="_on_objeto_parreable_2_body_entered"]
+[connection signal="body_exited" from="ObjetoParreable2" to="Player" method="_on_objeto_parreable_2_body_exited"]
+[connection signal="body_entered" from="ObjetoParreable3" to="Player" method="_on_objeto_parreable_3_body_entered"]
+[connection signal="body_exited" from="ObjetoParreable3" to="Player" method="_on_objeto_parreable_3_body_exited"]
+[connection signal="body_entered" from="ObjetoParreable4" to="Player" method="_on_objeto_parreable_4_body_entered"]
+[connection signal="body_exited" from="ObjetoParreable4" to="Player" method="_on_objeto_parreable_4_body_exited"]
+[connection signal="body_entered" from="ObjetoParreable5" to="Player" method="_on_objeto_parreable_5_body_entered"]
+[connection signal="body_exited" from="ObjetoParreable5" to="Player" method="_on_objeto_parreable_5_body_exited"]
+[connection signal="body_entered" from="ObjetoParreable6" to="Player" method="_on_objeto_parreable_6_body_entered"]
+[connection signal="body_exited" from="ObjetoParreable6" to="Player" method="_on_objeto_parreable_6_body_exited"]

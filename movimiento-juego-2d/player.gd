@@ -3,7 +3,7 @@ extends CharacterBody2D
 @onready var DashDuracion = $DashDuracion
 
 const velocidad = 5000.0
-const gravedad = 19
+var gravedad = 19.0
 const dash = 150.0
 var salto_diponible = true
 var velocidad_de_salto = -500.0
@@ -26,6 +26,7 @@ func _physics_process(delta: float) -> void:
 	if dasheando:  #Dasheando con el pj
 		velocity.x = dash_direccion * dash
 		velocity.y = 0.0
+		gravedad = 0
 		se_puede_dashear = false
 	
 	if is_on_floor() or puede_parrear: #Condición del salto
@@ -42,9 +43,30 @@ func _physics_process(delta: float) -> void:
 func _on_dash_duracion_timeout() -> void: #Señal para saber que hacer cuando termina el timer del dash
 	dasheando = false
 	DashDuracion.stop()
+	gravedad = 19
 	se_puede_dashear = true
 
 func _on_objeto_parreable_body_entered(body: Node2D) -> void:
 	puede_parrear = true
 func _on_objeto_parreable_body_exited(body: Node2D) -> void:
+	puede_parrear = false
+func _on_objeto_parreable_2_body_entered(body: Node2D) -> void:
+	puede_parrear = true
+func _on_objeto_parreable_2_body_exited(body: Node2D) -> void:
+	puede_parrear = false
+func _on_objeto_parreable_3_body_entered(body: Node2D) -> void:
+	puede_parrear = true
+func _on_objeto_parreable_3_body_exited(body: Node2D) -> void:
+	puede_parrear = false
+func _on_objeto_parreable_4_body_entered(body: Node2D) -> void:
+	puede_parrear = true
+func _on_objeto_parreable_4_body_exited(body: Node2D) -> void:
+	puede_parrear = false
+func _on_objeto_parreable_5_body_entered(body: Node2D) -> void:
+	puede_parrear = true
+func _on_objeto_parreable_5_body_exited(body: Node2D) -> void:
+	puede_parrear = false
+func _on_objeto_parreable_6_body_entered(body: Node2D) -> void:
+	puede_parrear = true
+func _on_objeto_parreable_6_body_exited(body: Node2D) -> void:
 	puede_parrear = false
