@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://4r7qbydy545t"]
+
+[ext_resource type="Texture2D" uid="uid://0bwe33hc03n5" path="res://icon.svg" id="1_becj5"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a5tj2"]
+radius = 27.0
+height = 54.0
+
+[node name="Enemigo" type="CharacterBody2D" unique_id=444794045]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2057839215]
+modulate = Color(0.8627451, 1, 0, 1)
+scale = Vector2(0.42, 0.42)
+texture = ExtResource("1_becj5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1730760936]
+shape = SubResource("CapsuleShape2D_a5tj2")

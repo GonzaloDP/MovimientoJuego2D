@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dvarmhuxrckp6" path="res://objeto_parreable.tscn" id="3_fw4w5"]
 [ext_resource type="PackedScene" uid="uid://cveojljx6ua3t" path="res://caja.tscn" id="5_aou4a"]
 [ext_resource type="PackedScene" uid="uid://c7m6xetdhfv36" path="res://pared.tscn" id="6_5ckkb"]
+[ext_resource type="PackedScene" uid="uid://4r7qbydy545t" path="res://enemigo.tscn" id="7_2hh7m"]
 
 [node name="Node2D" type="Node2D" unique_id=1985631070]
 script = ExtResource("1_otwa2")
@@ -14,7 +15,8 @@ script = ExtResource("1_otwa2")
 position = Vector2(33, 549)
 
 [node name="Player" parent="." unique_id=559844357 instance=ExtResource("1_lgngo")]
-position = Vector2(58, 450)
+position = Vector2(62, 452)
+metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=1678096458]
 position = Vector2(-2, 0)
@@ -79,31 +81,40 @@ position = Vector2(1636, 271)
 position = Vector2(2203, 549)
 
 [node name="Pared5" parent="." unique_id=1566638546 instance=ExtResource("6_5ckkb")]
-position = Vector2(2309, 270)
+position = Vector2(2380, 272)
 
 [node name="Pared6" parent="." unique_id=1956697737 instance=ExtResource("6_5ckkb")]
 position = Vector2(2948, 272)
 
 [node name="Caja8" parent="." unique_id=1688715955 instance=ExtResource("5_aou4a")]
-position = Vector2(2005, 392)
+position = Vector2(2070, 406)
 
 [node name="Caja9" parent="." unique_id=257353736 instance=ExtResource("5_aou4a")]
-position = Vector2(2149, 328)
+position = Vector2(2249, 313)
 
 [node name="Caja10" parent="." unique_id=54809092 instance=ExtResource("5_aou4a")]
-position = Vector2(2669, 452)
+position = Vector2(2747, 456)
 
 [node name="Caja11" parent="." unique_id=1228880829 instance=ExtResource("5_aou4a")]
-position = Vector2(2820, 385)
+position = Vector2(2875, 391)
 
 [node name="Caja12" parent="." unique_id=1850375655 instance=ExtResource("5_aou4a")]
-position = Vector2(2689, 319)
+position = Vector2(2737, 309)
 
 [node name="ObjetoParreable5" parent="." unique_id=975485322 instance=ExtResource("3_fw4w5")]
-position = Vector2(2507, 399)
+position = Vector2(2517, 403)
 
 [node name="ObjetoParreable6" parent="." unique_id=1277381888 instance=ExtResource("3_fw4w5")]
-position = Vector2(2774, 346)
+position = Vector2(2819, 350)
+
+[node name="Enemigo" parent="." unique_id=444794045 instance=ExtResource("7_2hh7m")]
+position = Vector2(2533, 459)
+
+[node name="Enemigo2" parent="." unique_id=380543758 instance=ExtResource("7_2hh7m")]
+position = Vector2(2876, 334)
+
+[node name="Enemigo3" parent="." unique_id=1956254236 instance=ExtResource("7_2hh7m")]
+position = Vector2(2237, 456)
 
 [connection signal="body_entered" from="ObjetoParreable" to="Player" method="_on_objeto_parreable_body_entered"]
 [connection signal="body_exited" from="ObjetoParreable" to="Player" method="_on_objeto_parreable_body_exited"]
